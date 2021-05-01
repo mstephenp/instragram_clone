@@ -1,14 +1,10 @@
-<div x-data="{ open: false }">
-  <button @click="open = true">Open Dropdown</button>
-
-  <ul
-    x-show="open"
-    @click.away="open = false"
-  >
-    Dropdown Body
-
-  </ul>
-</div>
+<%= if @current_user do %>
+  <%= live_component @socket, InstagramCloneWeb.HeaderNavComponent, current_user: @current_user %>
+<% else %>
+  <%= if @current_uri_path !== "/" do %>
+    <%= live_component @socket, InstagramCloneWeb.HeaderNavComponent, current_user: @current_user %>
+  <% end %>
+<% end %>
 
 <main role="main" class="container mx-auto max-w-full md:w-11/12 2xl:w-6/12 pt-24">
   <p class="alert alert-info" role="alert"
