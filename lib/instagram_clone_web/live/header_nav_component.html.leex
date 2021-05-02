@@ -57,7 +57,7 @@
                 <li class="py-2 px-4 hover:bg-gray-50">Profile</li>
               <% end %>
               <li class="py-2 px-4 hover:bg-gray-50">Saved</li>
-              <%= live_patch to: "" do %>
+              <%= live_patch to: Routes.live_path(@socket, InstagramCloneWeb.UserLive.Settings) do %>
                 <li class="py-2 px-4 hover:bg-gray-50">Settings</li>
               <% end %>
               <li class="border-t-2 py-2 px-4 hover:bg-gray-50"><%= link "Log Out", to: Routes.user_session_path(@socket, :delete), method: :delete %></li>
