@@ -1,7 +1,7 @@
 <div class="h-14 border-b-2 flex fixed w-full bg-white z-50">
   <header class="flex items-center container mx-auto max-w-full md:w-11/12 2xl:w-6/12">
     <%= live_patch to: Routes.page_path(@socket, :index) do %>
-      <h1 class="text-2xl font-bold italic">#InstagramClone</h1>
+      <h1 class="text-3xl font-bold">InstagramClone</h1>
     <% end %>
     <div class="w-2/5 flex justify-end"><input type="search" placeholder="Search" class="h-7 bg-gray-50 shadow-sm border-gray-300 focus:ring-gray-300 focus:ring-opacity-50 focus:border-gray-400  px-0.5 rounded-sm"></div>
     <nav class="w-3/5 relative">
@@ -40,7 +40,7 @@
             @click="open = true"
             class="w-7 h-7 ml-6 shadow-md rounded-full overflow-hidden cursor-pointer"
           >
-            <%= img_tag @current_user.avatar_url,
+            <%= img_tag InstagramCloneWeb.Uploaders.Avatar.get_thumb(@current_user.avatar_url),
             class: "w-full h-full object-cover object-center" %>
           </li>
           <ul class="absolute top-14 w-56 bg-white shadow-md text-sm -right-8"
