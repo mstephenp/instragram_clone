@@ -3,3 +3,35 @@
 <% else %>
   <%= live_component @socket, InstagramCloneWeb.PageLiveComponent, changeset: @changeset, trigger_submit: @trigger_submit %>
 <% end %>
+
+
+<div class="p-6 max-w-xl mx-auto bg-blue-200 dark:bg-gray-800 rounded-md shadow-xl flex items-center space-x-4">
+  <div class="flex-shrink-0">
+   <img class="h-12 w-12" src="test" alt="image here">
+   <p>test</p>
+  </div>
+  <div class="text-xl font-medium text-black">
+    This is only a test
+  </div>
+  <p class="text-gray-500">
+    and another thing...
+  </p>
+</div>
+
+<div class="flex items-center justify-center w-full mt-12 mb-12">
+  <label for="toggleB" class="flex items-center cursor-pointer">
+    <!-- toggle -->
+    <div class="relative">
+      <!-- input -->
+      <input type="checkbox" id="toggleB" class="sr-only">
+      <!-- line -->
+      <div class="block bg-gray-600 w-14 h-8 rounded-full"></div>
+      <!-- dot -->
+      <div class="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition"></div>
+    </div>
+    <!-- label -->
+    <div class="ml-3 text-gray-700 font-medium">
+      Button Test
+    </div>
+  </label>
+</div>
